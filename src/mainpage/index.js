@@ -1,29 +1,34 @@
 import styled from "styled-components";
 import React from "react";
-import "./style1.css";
+import TodoLeft from "../TodoLeft/index2";
 import TodoAdd from "../TodoAdd";
-import TodoDate from "../TodoDate";
-import TodoLeft from "../TodoLeft";
-import TodoList from "../TodoList";
+import TodoDate from "../Tododate/index1";
+import Todoitem from "../Todoitem/index3";
 
-const Container=styled.div`background-color: aqua;
-text-align: center;`
+const Container = styled.div`
+background-color: yellow;
+height:100vh;
+// display:flex;
+// justify-content: center;
+`;
+
+
+
 
 function Mainpage(){
     return(
-    <div>
     <Container>
+    
         <TodoDate/>
-        <TodoLeft todos={todos}/>
-        <Breakline></Breakline>
-        <TodoAdd todos={todos} updateTodo={addTodo}/>
-        <TodoList todos={todos} delelteTodo={removeTodo}/>
+        <TodoLeft/>
+    
+        <TodoAdd/>
+        <Todoitem/>
         
         
         
-        
-    </Container>  
-    </div> 
+    
+    </Container> 
     )
 }
 
