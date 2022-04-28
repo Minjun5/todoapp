@@ -4,7 +4,7 @@ import React from "react";
 function C(){
     return(
     <div>
-       
+        todos left
     </div>    
     )
 }
