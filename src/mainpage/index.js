@@ -16,8 +16,10 @@ height:100vh;
 
 
 function Mainpage(){
-   const [todo,setodos]=useState({
-    })
+   const [todos,setodos]=useState([]);
+    initial={
+        age:null,
+    }
     return(
     <Container>
     
