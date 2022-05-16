@@ -1,36 +1,44 @@
 import styled from "styled-components";
 import React from "react";
 import TodoLeft from "../TodoLeft/index2";
+import styled from "styled-components";
+import React from "react";
+import TodoLeft from "../TodoLeft/index2";
 import TodoAdd from "../TodoAdd";
 import TodoDate from "../Tododate/index1";
-import Todoitem from "../Todoitem/index3";
+import Todoitem from "../todoitem/index3";
 import { useState } from "react";
-import { initial } from "lodash";
-
+import { defaults, initial } from "lodash";
 const Container = styled.div`
 background-color: yellow;
 height:100vh;
 // display:flex;
 // justify-content: center;
 `;
-
-
-
-
-function Mainpage(){
-   const [todos,setodos]=useState([]);
-    initial={
-        age:null,
+const Input=styled.input``
+const putUserinfo=(e)=>{
+    const {name,value}=e.target;
+    console.log(name)
+    console.log(value)
+    setuser({...user,
+    [name]:value}
+    );console.log(user)
     }
+function Mainpage(){
+    
+    const [user, setuser]=useState({
+        id:"",
+        password:""
+    })
     return(
     <Container>
     
         <TodoDate/>
-        <TodoLeft/>
+        <TodoLeft todos={todos.length}/>
     
-        <TodoAdd/>
+        <TodoAdd todos={todos} updateTodo={addTodo}/>
         <Todoitem/>
-        
+        <Input type="text" name="ID" onChange={putUserinfo}></Input>
         
         
     
