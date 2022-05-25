@@ -9,11 +9,6 @@ width:30px;
 height:30px;
 `;
 
-const[todos,setTodos]=useState([{isDone:null ,text:"", id:null }])
-const removeTodo=(todos)=>{
-    setTodos([...null])
-}
-
 
 
 function e() {
